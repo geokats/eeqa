@@ -515,11 +515,13 @@ def main(args):
                             result['batch_size'] = args.train_batch_size
                             if args.add_lstm:
                                 logger.info("        p: %.2f, r: %.2f, f1: %.2f" % (result["prec"], result["recall"], result["f1"]))
+
+                            logger.info('Epoch: {}, Step: {} / {}, used_time = {:.2f}s, loss = {:.6f}'.format(
+                            epoch, step + 1, len(train_batches), time.time() - start_time, tr_loss / nb_tr_steps))
+
                             if (best_result is None) or (result[args.eval_metric] > best_result[args.eval_metric]):
                                 best_result = result
                                 save_model = True
-                                logger.info('Epoch: {}, Step: {} / {}, used_time = {:.2f}s, loss = {:.6f}'.format(
-                                    epoch, step + 1, len(train_batches), time.time() - start_time, tr_loss / nb_tr_steps))
                                 logger.info("!!! Best dev %s (lr=%s, epoch=%d): p_c: %.2f, r_c: %.2f, f1_c: %.2f, p_i: %.2f, r_i: %.2f, f1_i: %.2f" %
                                             (args.eval_metric, str(lr), epoch, result["prec_c"], result["recall_c"], result["f1_c"], result["prec_i"], result["recall_i"], result["f1_i"]))
                         else:
