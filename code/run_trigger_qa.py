@@ -59,7 +59,7 @@ class trigger_category_vocab(object):
             with open(file) as f:
                 for line in f:
                     example = json.loads(line)
-                    events, sentence = example["event"], example["sentence"] 
+                    events, sentence = example["event"], example["sentence"]
                     if len(sentence) > self.max_sent_length: self.max_sent_length = len(sentence)
                     for event in events:
                         event_type = event[0][1]
@@ -71,7 +71,7 @@ class trigger_category_vocab(object):
 
         # add [CLS]
         self.max_sent_length += 12
-                    
+
 
 class InputFeatures(object):
     """A single set of features of data."""
@@ -195,7 +195,7 @@ def read_ace_examples(nth_query, input_file, tokenizer, category_vocab, is_train
                 # import ipdb; ipdb.set_trace()
             sentence_id += 1
 
-    return examples, features   
+    return examples, features
 
 
 
@@ -234,7 +234,7 @@ def evaluate(args, eval_examples, category_vocab, model, device, eval_dataloader
             pred_triggers[sentence_id[i]] = sentence_triggers
 
     # get results (classification)
-    gold_triggers = [] 
+    gold_triggers = []
     for eval_example in eval_examples:
         events = eval_example["event"]
         s_start = eval_example["s_start"]
@@ -251,7 +251,7 @@ def evaluate(args, eval_examples, category_vocab, model, device, eval_dataloader
         pred_sentence_triggers = pred_triggers[sentence_id]
         # for pred_trigger_n
         for trigger in pred_sentence_triggers: pred_trigger_n += 1
-        # for gold_trigger_n     
+        # for gold_trigger_n
         for trigger in gold_sentence_triggers: gold_trigger_n += 1
         # for true_positive_n
         for trigger in pred_sentence_triggers:
@@ -528,8 +528,9 @@ def main(args):
                             save_model = True
                         if (int(args.num_train_epochs)-epoch<3 and (step+1)/len(train_batches)>0.7) or step == 0:
                             save_model = True
-                        else:
-                            save_model = False
+                        # else:
+                        #     save_model = False
+
                         if save_model:
                             model_to_save = model.module if hasattr(model, 'module') else model
                             subdir = os.path.join(args.output_dir, "epoch{epoch}-step{step}".format(epoch=epoch, step=step))
@@ -624,7 +625,7 @@ if __name__ == "__main__":
                                  "0 (default value): dynamic loss scaling.\n"
                                  "Positive power of 2: static loss scaling value.\n")
         parser.add_argument("--add_lstm", action='store_true', help="Whether to add LSTM on top of BERT.")
-        parser.add_argument("--lstm_lr", default=None, type=float, help="The initial learning rate for lstm Adam.")        
+        parser.add_argument("--lstm_lr", default=None, type=float, help="The initial learning rate for lstm Adam.")
         parser.add_argument("--nth_query", default=0, type=int, help="use n-th candidate query")
         args = parser.parse_args()
 
