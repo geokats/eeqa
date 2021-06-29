@@ -53,8 +53,13 @@ if __name__ == '__main__':
     with open(args.input_file, 'r') as inpf, open(args.output_file, 'w') as outf:
         count = 0
         for line in inpf:
+            #Read and convert example
             example = json.loads(line)
             converted_example = convert_example(example)
+            #If sentence is too long for BERT, reject it
+            if len(converted_example['sentence']) > 500:
+                print(f"WARNING: Sentence of length {len(converted_example['sentence'])} is too long for BERT")
+                continue
             #Write to output file
             json.dump(converted_example, outf)
             outf.write("\n")
