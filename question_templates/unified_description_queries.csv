@@ -1,0 +1,218 @@
+ARTIFACT.CONSTRUCTION_Artifact,what artifact is constructed?
+ARTIFACT.CONSTRUCTION_Instrument,what is the construction instrument?
+ARTIFACT.CONSTRUCTION_Manufacturer,who made the artifact?
+ARTIFACT.CONSTRUCTION_Place,where is the artifact made?
+ARTIFACT.DESTRUCTION_Agent,Who is the destroyer?
+ARTIFACT.DESTRUCTION_Artifact,what artifact is destroyed?
+ARTIFACT.DESTRUCTION_Damager,who damaged something?
+ARTIFACT.DESTRUCTION_Damagerdestroyer,who damaged or destroyed something?
+ARTIFACT.DESTRUCTION_Destroyer,who destroyed something?
+ARTIFACT.DESTRUCTION_Fireexplosionobject,what exploded?
+ARTIFACT.DESTRUCTION_Instrument,what is the destruction instrument?
+ARTIFACT.DESTRUCTION_Money,What is the money?
+ARTIFACT.DESTRUCTION_Numberofaffected,How many are affected?
+ARTIFACT.DESTRUCTION_Place,where the destruction happen?
+ARTIFACT.DESTRUCTION_Property,what is destroyed?
+ARTIFACT.DESTRUCTION_Target,what is the target?
+ARTIFACT.DESTRUCTION_Time,when the destruction happen?
+CONFLICT_Place,where the conflict happen?
+CONFLICT_Recipient,Who is the recipient?
+CONFLICT_Yielder,who yielded?
+CONFLICT.ATTACK_Agent,who is the attacker?
+CONFLICT.ATTACK_Arrested,who attacker got arrested?
+CONFLICT.ATTACK_Artifact,what artifact is attacked?
+CONFLICT.ATTACK_Attacker,Who is the attacking agent?
+CONFLICT.ATTACK_Dead,who the attack killed?
+CONFLICT.ATTACK_Displaced,who the attack displaced?
+CONFLICT.ATTACK_Injured,who the attack injured?
+CONFLICT.ATTACK_Instrument,What is the instrument used?
+CONFLICT.ATTACK_Money,What is the money?
+CONFLICT.ATTACK_Numberofaffected,How many are affected?
+CONFLICT.ATTACK_Participant,who participated in the attack?
+CONFLICT.ATTACK_Place,Where the event takes place?
+CONFLICT.ATTACK_Target,what is the target of the attack?
+CONFLICT.ATTACK_Time,when is it?
+CONFLICT.ATTACK_Vehicle,what is the vehicle of attack?
+CONFLICT.DEMONSTRATE_Agent,who is the demonstrator?
+CONFLICT.DEMONSTRATE_Aim,What is the aim of demonstrators?
+CONFLICT.DEMONSTRATE_Arrested,who demonstrator got arrested?
+CONFLICT.DEMONSTRATE_Dead,who demonstrator died?
+CONFLICT.DEMONSTRATE_Demonstrator,Who is the demonstrator?
+CONFLICT.DEMONSTRATE_Injured,who the demonstration injured?
+CONFLICT.DEMONSTRATE_Instrument,what is the instrument of demonstration?
+CONFLICT.DEMONSTRATE_Numberofaffected,How many are affected?
+CONFLICT.DEMONSTRATE_Observedentity,who demonstrated?
+CONFLICT.DEMONSTRATE_Participant,who participated in the demonstration?
+CONFLICT.DEMONSTRATE_Place,Where the event takes place?
+CONFLICT.DEMONSTRATE_Police,who is the force?
+CONFLICT.DEMONSTRATE_Target,what is the target of the demonstration?
+CONFLICT.DEMONSTRATE_Time,when is it?
+CONFLICT.RETREAT_Destination,Who is the defendant?
+CONFLICT.RETREAT_Origin,Where is the origin?
+CONFLICT.RETREAT_Place,where is it?
+CONFLICT.RETREAT_Recipient,Who is the recipient?
+CONFLICT.RETREAT_Retreater,who retreated?
+CONFLICT.RETREAT_Surrenderer,who surrendered?
+CONTACT_Communicator,Who is the communicator?
+CONTACT_Deceased,who deceased died?
+CONTACT_Participant,who participated?
+CONTACT_Place,where is it?
+CONTACT_Recipient,Who is the recipient?
+CONTACT.EXPRESS-INTENT_Communicator,who is expressing an intent?
+CONTACT.EXPRESS-INTENT_Place,Where the event takes place?
+CONTACT.EXPRESS-INTENT_Recipient,Who is the recipient?
+CONTACT.MEET_Communicator,who met?
+CONTACT.MEET_Observedentity,who met?
+CONTACT.MEET_Participant,who participated?
+CONTACT.MEET_Place,Where the event takes place?
+CONTACT.MEET_Recipient,Who is the recipient?
+CONTACT.PHONE-WRITE_Observedentity,Who is communicating agents?
+CONTACT.PHONE-WRITE_Place,Where the event takes place?
+DISASTER_Crashobject,who got crashed?
+DISASTER_Driverpassenger,who is the passenger?
+DISASTER_Place,where is it?
+DISASTER_Vehicle,What is the vehicle?
+GPE.AGREEMENT_Otherparticipant,who participated?
+GPE.AGREEMENT_Participant,who participated in the agreement?
+GPE.AGREEMENT_Place,where is the agreement?
+GPE.AGREEMENT_Rejecternullifier,who rejected the agreement?
+GPE.AGREEMENT_Violator,Who violated the agreement?
+GPE.GOVERNMENT-FORMATION_Founder,Who is the founder?
+GPE.GOVERNMENT-FORMATION_Gpe,what gpe is formed?
+GPE.GOVERNMENT-FORMATION_Participant,who participated in the formation?
+GPE.GOVERNMENT-FORMATION_Place,where is formed?
+GPE.GOVERNMENT-LEGISLATE_Governmentbody,what is the legislation body?
+GPE.GOVERNMENT-LEGISLATE_Law,What is the law?
+GPE.GOVERNMENT-LEGISLATE_Place,where is legislated?
+GPE.SACTIONS_Artifactmoney,what artifact got sanctioned?
+GPE.SACTIONS_Giver,who is the seller?
+GPE.SACTIONS_Place,where is it?
+GPE.SACTIONS_Preventer,who prevented the sanctions?
+GPE.SACTIONS_Recipient,Who is the recipient?
+GPE.SPY_Beneficiary,who spy is the beneficiary?
+GPE.SPY_Observedentity,who spied?
+GPE.SPY_Place,where is it?
+GPE.SPY_Spy,who spied?
+GPE.VOTE_Ballot,What the ballot says?
+GPE.VOTE_Candidate,who is the candidate of the elections?
+GPE.VOTE_Place,where are elections?
+GPE.VOTE_Preventer,who prevented the elections?
+GPE.VOTE_Result,what is the results of the elections?
+GPE.VOTE_Voter,who voted?
+INSPECTION_Inspectedentity,Who is inspected?
+INSPECTION_Inspector,who is the inspector?
+INSPECTION_Monitor,Who is monitoring?
+INSPECTION_Monitoredentity,Who is being monitored?
+INSPECTION_Observedentity,Who is entity?
+INSPECTION_Observer,Who is the observer?
+INSPECTION_Place,where is it?
+JUSTICE.ARREST_Agent,who is the arrested agent?
+JUSTICE.ARREST_Arrested,who is arrested?
+JUSTICE.ARREST_Crime,what is the arrested crime?
+JUSTICE.ARREST_Dead,who arrested died?
+JUSTICE.ARREST_Injured,who the arrest injured?
+JUSTICE.ARREST_Instrument,what is the arrested instrument?
+JUSTICE.ARREST_Numberofaffected,How many are affected?
+JUSTICE.ARREST_Place,Where the event takes place?
+JUSTICE.ARREST_Target,who is the target of the arrest?
+JUSTICE.ARREST_Time,when is it?
+JUSTICE.ARREST-JAIL_Agent,Who is the jailor?
+JUSTICE.ARREST-JAIL_Crime,what crime is jailed for?
+JUSTICE.ARREST-JAIL_Detainee,who is detained?
+JUSTICE.ARREST-JAIL_Jailer,who is the jailer of the arrest?
+JUSTICE.ARREST-JAIL_Person,Who is jailed?
+JUSTICE.ARREST-JAIL_Place,Where the event takes place?
+JUSTICE.CHARGE-INDICT_Agent,who is the indicted?
+JUSTICE.CHARGE-INDICT_Arrested,who is arrested?
+JUSTICE.CHARGE-INDICT_Crime,what crime is indicted for?
+JUSTICE.CHARGE-INDICT_Defendant,Who is the defendant?
+JUSTICE.CHARGE-INDICT_Judgecourt,who is the judge of the induction?
+JUSTICE.CHARGE-INDICT_Numberofaffected,How many are affected?
+JUSTICE.CHARGE-INDICT_Participant,who participated in the induction?
+JUSTICE.CHARGE-INDICT_Place,Where the event takes place?
+JUSTICE.CHARGE-INDICT_Prosecutor,Who is the prosecuting agent?
+JUSTICE.CHARGE-INDICT_Target,what is the target?
+JUSTICE.CHARGE-INDICT_Time,when is it?
+JUSTICE.EXECUTE_Crime,what crime is executed for?
+JUSTICE.EXECUTE_Defendant,Who is the defendant?
+JUSTICE.EXECUTE_Executioner,Who is the executioner?
+JUSTICE.EXECUTE_Place,Where the event takes place?
+JUSTICE.EXTRADITE_Crime,what crime is extradited for?
+JUSTICE.EXTRADITE_Defendant,Who is the defendant?
+JUSTICE.EXTRADITE_Destination,Where the person is extradited to?
+JUSTICE.EXTRADITE_Extraditer,Who is the extradited?
+JUSTICE.EXTRADITE_Origin,What is original location of the person being extradited?
+JUSTICE.INVESTIGATE_Crime,what crime is investigated for?
+JUSTICE.INVESTIGATE_Defendant,Who is the defendant?
+JUSTICE.INVESTIGATE_Investigator,Who is the investigator?
+JUSTICE.INVESTIGATE_Place,Where the event takes place?
+JUSTICE.RELEASE-PAROLE_Agent,who is the parole?
+JUSTICE.RELEASE-PAROLE_Arrested,who parole got arrested?
+JUSTICE.RELEASE-PAROLE_Crime,what crime is released for?
+JUSTICE.RELEASE-PAROLE_Dead,who released died?
+JUSTICE.RELEASE-PAROLE_Injured,who the release injured?
+JUSTICE.RELEASE-PAROLE_Instrument,what is the parole instrument?
+JUSTICE.RELEASE-PAROLE_Kidnapped,Who is kidnapped?
+JUSTICE.RELEASE-PAROLE_Money,What is the money?
+JUSTICE.RELEASE-PAROLE_Numberofaffected,How many are affected?
+JUSTICE.RELEASE-PAROLE_Participant,who participated in the release?
+JUSTICE.RELEASE-PAROLE_Perpetrator,Who is the perpetrator?
+JUSTICE.RELEASE-PAROLE_Place,Where the event takes place?
+JUSTICE.RELEASE-PAROLE_Target,who is the target of the release?
+JUSTICE.RELEASE-PAROLE_Time,when is it?
+JUSTICE.SENTENCE_Crime,what crime is sentenced for?
+JUSTICE.SENTENCE_Defendant,Who is the defendant?
+JUSTICE.SENTENCE_Judgecourt,who judge sentenced?
+JUSTICE.SENTENCE_Place,Where the event takes place?
+JUSTICE.TRIAL-HEARING_Crime,what crime is heard?
+JUSTICE.TRIAL-HEARING_Defendant,Who is the defendant?
+JUSTICE.TRIAL-HEARING_Judgecourt,who judge heard?
+JUSTICE.TRIAL-HEARING_Place,Where the event takes place?
+JUSTICE.TRIAL-HEARING_Prosecutor,Who is the prosecuting agent?
+LIFE.DIE_Agent,Who is the killer?
+LIFE.DIE_Instrument,What is the instrument used?
+LIFE.DIE_Killer,Who is the killer?
+LIFE.DIE_Place,Where the event takes place?
+LIFE.DIE_Victim,Who died?
+LIFE.INJURE_Injurer,Who is the attacking agent?
+LIFE.INJURE_Instrument,What is the instrument used?
+LIFE.INJURE_Place,Where the event takes place?
+LIFE.INJURE_Victim,Who is victim?
+MOVEMENT.TRANSPORT_Agent,Who is responsible for the transport event?
+MOVEMENT.TRANSPORT_Artifact,What is being transported?
+MOVEMENT.TRANSPORT_Destination,Where the transporting is directed?
+MOVEMENT.TRANSPORT_Granter,who is the granter?
+MOVEMENT.TRANSPORT_Hidingplace,Where is the hiding place?
+MOVEMENT.TRANSPORT_Origin,Where the transporting originated?
+MOVEMENT.TRANSPORT_Passenger,Who is the passenger?
+MOVEMENT.TRANSPORT_Preventer,who prevented the transportation?
+MOVEMENT.TRANSPORT_Transporter,when is it?
+MOVEMENT.TRANSPORT_Vehicle,What is the vehicle used?
+PERSONNEL.ELECT_Candidate,who is the elected candidate?
+PERSONNEL.ELECT_Place,Where the event takes place?
+PERSONNEL.ELECT_Voter,who voted?
+PERSONNEL.END-POSITION_Employee,Who is the employee?
+PERSONNEL.END-POSITION_Place,Where the event takes place?
+PERSONNEL.END-POSITION_Placeofemployment,where is it?
+PERSONNEL.START-POSITION_Employee,Who is the employee?
+PERSONNEL.START-POSITION_Place,Where the event takes place?
+PERSONNEL.START-POSITION_Placeofemployment,where is it?
+TRANSACTION_Beneficiary,Who benefits from the transaction?
+TRANSACTION_Giver,who is the seller?
+TRANSACTION_Participant,who participated in the transaction?
+TRANSACTION_Place,where is it?
+TRANSACTION_Recipient,Who is the recipient?
+TRANSACTION.TRANSFER-MONEY_Beneficiary,Who benefits from the transfer?
+TRANSACTION.TRANSFER-MONEY_Giver,Who is the donating agent?
+TRANSACTION.TRANSFER-MONEY_Money,What is the money?
+TRANSACTION.TRANSFER-MONEY_Place,Where the event takes place?
+TRANSACTION.TRANSFER-MONEY_Preventer,who prevented the transportation?
+TRANSACTION.TRANSFER-MONEY_Recipient,Who is the recipient of money?
+TRANSACTION.TRANSFER-OWNERSHIP_Artifact,What is bought?
+TRANSACTION.TRANSFER-OWNERSHIP_Beneficiary,Who benefits from the transaction?
+TRANSACTION.TRANSFER-OWNERSHIP_beneficiary,Who benefits from the transaction?
+TRANSACTION.TRANSFER-OWNERSHIP_Giver,who is the seller?
+TRANSACTION.TRANSFER-OWNERSHIP_Place,Where the event takes place?
+TRANSACTION.TRANSFER-OWNERSHIP_Preventer,who prevented the transportation?
+TRANSACTION.TRANSFER-OWNERSHIP_Recipient,Who is the recipient?
+TRANSACTION.TRANSFER-OWNERSHIP_Territoryorfacility,where is the territory?
