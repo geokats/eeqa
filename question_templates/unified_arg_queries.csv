@@ -84,11 +84,11 @@ GPE.GOVERNMENT-FORMATION_Place,Where the event takes place?
 GPE.GOVERNMENT-LEGISLATE_Governmentbody,What gpe body?
 GPE.GOVERNMENT-LEGISLATE_Law,What is the law?
 GPE.GOVERNMENT-LEGISLATE_Place,Where the event takes place?
-GPE.SACTIONS_Artifactmoney,what got sanctioned?
-GPE.SACTIONS_Giver,Who is the giver?
-GPE.SACTIONS_Place,Where the event takes place?
-GPE.SACTIONS_Preventer,Who is the preventer?
-GPE.SACTIONS_Recipient,Who is the recipient?
+GPE.SANCTIONS_Artifactmoney,what got sanctioned?
+GPE.SANCTIONS_Giver,Who is the giver?
+GPE.SANCTIONS_Place,Where the event takes place?
+GPE.SANCTIONS_Preventer,Who is the preventer?
+GPE.SANCTIONS_Recipient,Who is the recipient?
 GPE.SPY_Beneficiary,Who is the beneficiary?
 GPE.SPY_Observedentity,Who is entity?
 GPE.SPY_Place,Where the event takes place?
