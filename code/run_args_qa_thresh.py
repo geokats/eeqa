@@ -107,7 +107,7 @@ def convert_examples_to_features(examples, tokenizer, query_templates, nth_query
             trigger_token = example.sentence[trigger_offset]
             arguments = event[1:]
             for argument_type in query_templates[event_type]:
-                
+
                 query = query_templates[event_type][argument_type][nth_query]
                 query = query.replace("[trigger]", trigger_token)
 
@@ -145,7 +145,7 @@ def convert_examples_to_features(examples, tokenizer, query_templates, nth_query
 
                 # start & end position
                 start_position, end_position = None, None
-                
+
                 sentence_start = example.s_start
                 sentence_offset = len(query_tokens) + 2
                 fea_trigger_offset = trigger_offset + sentence_offset
@@ -160,7 +160,7 @@ def convert_examples_to_features(examples, tokenizer, query_templates, nth_query
                         if gold_argument_type == argument_type:
                             no_answer = False
                             answer_start, answer_end = argument[0], argument[1]
-                
+
                             start_position = answer_start - sentence_start + sentence_offset
                             end_position = answer_end - sentence_start + sentence_offset
                             features.append(InputFeatures(example_id=example_id, tokens=tokens, token_to_orig_map=token_to_orig_map, input_ids=input_ids, input_mask=input_mask, segment_ids=segment_ids, if_trigger_ids=if_trigger_ids,
@@ -365,7 +365,7 @@ def evaluate(args, model, device, eval_dataloader, eval_examples, gold_examples,
             event_type_offset_argument_type = "_".join([eval_feature.event_type, str(eval_feature.token_to_orig_map[eval_feature.fea_trigger_offset]), eval_feature.argument_type])
             all_results.append(RawResult(example_id=example_id, event_type_offset_argument_type=event_type_offset_argument_type,
                                          start_logits=start_logits, end_logits=end_logits))
-        
+
     # preds, nbest_preds, na_probs = \
     preds = make_predictions(eval_examples, eval_features, all_results,
                          args.n_best_size, args.max_answer_length, args.larger_than_cls)
@@ -384,7 +384,7 @@ def evaluate(args, model, device, eval_dataloader, eval_examples, gold_examples,
                 # event_type_offset_argument_type = "_".join([event_type, str(trigger_offset), argument_type])
                 event_type_argument_type = "_".join([event_type, argument_type])
                 all_gold[example_id].append([event_type_argument_type, [argument_start , argument_end]])
-    
+
     # linearize the preds and all_gold
     new_preds = []
     new_all_gold = []
@@ -429,11 +429,11 @@ def evaluate(args, model, device, eval_dataloader, eval_examples, gold_examples,
 
     #             logger.info("trigger: {}".format(str(example).split("|||")[1]))
 
-    #             gold_str_list = [] 
+    #             gold_str_list = []
     #             for gold in all_gold[example_id]: gold_str_list.append(" ".join([gold[0], str(gold[1][0]), str(gold[1][1])]))
     #             logger.info("gold: {}".format(" | ".join(gold_str_list)))
 
-    #             pred_str_list = [] 
+    #             pred_str_list = []
     #             for pred in debug_preds[example_id]: pred_str_list.append(" ".join([pred[0], str(pred[1][0]), str(pred[1][1]), str(pred[2])]))
     #             logger.info("pred: {} \n".format(" | ".join(pred_str_list)))
 
@@ -443,7 +443,7 @@ def evaluate(args, model, device, eval_dataloader, eval_examples, gold_examples,
     gold_arg_n, pred_arg_n, pred_in_gold_n, gold_in_pred_n = 0, 0, 0, 0
     # pred_arg_n
     for argument in final_new_preds: pred_arg_n += 1
-    # gold_arg_n     
+    # gold_arg_n
     for argument in new_all_gold: gold_arg_n += 1
     # pred_in_gold_n
     for argument in final_new_preds:
@@ -480,7 +480,7 @@ def evaluate(args, model, device, eval_dataloader, eval_examples, gold_examples,
     gold_arg_n, pred_arg_n, pred_in_gold_n, gold_in_pred_n = 0, 0, 0, 0
     # pred_arg_n
     for argument in final_new_preds_identification: pred_arg_n += 1
-    # gold_arg_n     
+    # gold_arg_n
     for argument in new_all_gold_identification: gold_arg_n += 1
     # pred_in_gold_n
     for argument in final_new_preds_identification:
@@ -669,21 +669,20 @@ def main(args):
                             result['epoch'] = epoch
                             result['learning_rate'] = lr
                             result['batch_size'] = args.train_batch_size
+                            logger.info('Epoch: {}, Step: {} / {}, used_time = {:.2f}s, loss = {:.6f}'.format(
+                            epoch, step + 1, len(train_batches), time.time() - start_time, tr_loss / nb_tr_steps))
+                            logger.info("Eval: p_c: %.2f, r_c: %.2f, f1_c: %.2f, p_i: %.2f, r_i: %.2f, f1_i: %.2f, best_na_thresh: %.5f" %
+                            (result["prec_c"], result["recall_c"], result["f1_c"], result["prec_i"], result["recall_i"], result["f1_i"], result["best_na_thresh"]))
+
                             if (best_result is None) or (result[args.eval_metric] > best_result[args.eval_metric]):
                                 best_result = result
                                 save_model = True
-                                logger.info('Epoch: {}, Step: {} / {}, used_time = {:.2f}s, loss = {:.6f}'.format(
-                                    epoch, step + 1, len(train_batches), time.time() - start_time, tr_loss / nb_tr_steps))
-                                logger.info("!!! Best dev %s (lr=%s, epoch=%d): p_c: %.2f, r_c: %.2f, f1_c: %.2f, p_i: %.2f, r_i: %.2f, f1_i: %.2f, best_na_thresh: %.5f" %
-                                # logger.info("!!! Best dev %s (lr=%s, epoch=%d): p_c: %.2f, r_c: %.2f, f1_c: %.2f, best_na_thresh: %.10f" %
-                                            # (args.eval_metric, str(lr), epoch, result["prec_c"], result["recall_c"], result["f1_c"], result["best_na_thresh"]))
-                                            (args.eval_metric, str(lr), epoch, result["prec_c"], result["recall_c"], result["f1_c"], result["prec_i"], result["recall_i"], result["f1_i"], result["best_na_thresh"]))
+                                logger.info("!!! Best dev %s (lr=%s, epoch=%d)" % (args.eval_metric, str(lr), epoch))
                         else:
                             save_model = True
                         if (int(args.num_train_epochs)-epoch<3 and (step+1)/len(train_batches)>0.7) or step == 0:
                             save_model = True
-                        else:
-                            save_model = False
+
                         if save_model:
                             model_to_save = model.module if hasattr(model, 'module') else model
                             subdir = os.path.join(args.output_dir, "epoch{epoch}-step{step}".format(epoch=epoch, step=step))
